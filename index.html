@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIPOMAS | Kesbangpol Bengkulu Selatan</title>
+<style>
+:root{--navy:#17452f;--blue:#216b4a;--light:#f3f7f4;--gold:#d8ad38;--green:#0b6b4f;--red:#b93636;--text:#26352d;--pemda:#0d5c43}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(90deg,rgba(244,248,245,.94),rgba(237,245,240,.88)),url('https://www.bengkuluinteraktif.com/wp-content/uploads/2025/04/tapd-bengkulu-selatan-dorong-percepatan-perubahan-rapbd-2025-sesuai-se-mendagri-67f68be28b6f1-bengkuluinteraktif.webp') center top/cover fixed no-repeat;color:var(--text);position:relative}body:before{content:"PEMERINTAH KABUPATEN BENGKULU SELATAN";position:fixed;inset:0;display:grid;place-items:center;transform:rotate(-28deg);font-size:54px;font-weight:900;letter-spacing:3px;color:#0b5d4f;opacity:.035;pointer-events:none;z-index:0;white-space:nowrap}.main,.sidebar{z-index:1}
+.sidebar{position:fixed;left:0;top:0;width:255px;height:100vh;background:linear-gradient(180deg,#084d38,#0b6b4f 55%,#17452f);color:white;padding:24px 16px;z-index:5}
+.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 25px;border-bottom:1px solid #ffffff2b}
+.logo{display:block;width:68px;height:68px;flex:0 0 68px;object-fit:contain;filter:drop-shadow(0 2px 3px #0003)}
+.brand b{font-size:19px}.brand small{display:block;opacity:.75;margin-top:3px}
+nav{margin-top:24px}nav a{display:block;color:#eaf3ff;text-decoration:none;padding:12px 13px;border-radius:8px;margin:5px 0;font-size:14px}nav a:hover,nav a.active{background:#ffffff1b}
+.main{margin-left:255px;min-height:100vh}.top{height:76px;background:linear-gradient(90deg,#fff 0%,#fff 72%,#f0f7f3 100%);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:4}
+.top h2{font-size:18px;margin:0}.user{font-size:13px;color:#667085}
+.content{padding:28px 30px}.hero{background:linear-gradient(90deg,rgba(8,77,56,.88),rgba(11,107,79,.68)),url('https://www.bengkuluinteraktif.com/wp-content/uploads/2025/04/tapd-bengkulu-selatan-dorong-percepatan-perubahan-rapbd-2025-sesuai-se-mendagri-67f68be28b6f1-bengkuluinteraktif.webp') center/cover;color:white;border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px;overflow:hidden}.hero>div{flex:1;min-width:0}.hero h1{margin:0 0 8px;font-size:31px}.hero p{max-width:680px;line-height:1.6;margin:0;color:#e9f3ff}.badge{display:inline-block;background:#ffffff20;border:1px solid #ffffff35;padding:6px 10px;border-radius:20px;font-size:12px;margin-bottom:14px}
+.hero .mark {
+    display: block;
+    width: 320px;
+    max-width: 42%;
+    max-height: 380px;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
+    flex: 0 1 300px;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(30px);
+}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:22px 0}.card{background:white;border:1px solid #e4e9ef;border-radius:13px;padding:19px;box-shadow:0 3px 12px #15253b08}.label{font-size:12px;color:#667085}.value{font-size:28px;font-weight:800;margin-top:8px;color:var(--navy)}.delta{font-size:12px;margin-top:6px;color:var(--green)}
+.grid{display:grid;grid-template-columns:1.4fr .9fr;gap:18px}.panel{background:white;border:1px solid #e4e9ef;border-radius:13px;padding:20px}.panel h3{margin:0 0 16px;font-size:17px}.bars div{margin:14px 0}.barlabel{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px}.bar{height:9px;background:#edf1f5;border-radius:10px;overflow:hidden}.fill{height:100%;background:var(--blue);border-radius:10px}.notice{padding:13px;border-radius:9px;background:#f4f8fd;border-left:4px solid var(--blue);font-size:13px;line-height:1.5;margin-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:12px 10px;border-bottom:1px solid #edf0f3;text-align:left}th{color:#667085;background:#fafbfc}.status{padding:5px 8px;border-radius:20px;font-size:11px;font-weight:bold}.ok{background:#e5f6ee;color:#16734f}.warn{background:#fff3d9;color:#956c13}.danger{background:#fde9e9;color:#a73a3a}
+.section{display:none}.section.active{display:block}.btn{border:0;border-radius:8px;padding:9px 13px;background:var(--blue);color:white;cursor:pointer;font-size:13px}.btn.secondary{background:#edf4fb;color:var(--blue)}
+.search{display:flex;gap:10px;margin-bottom:15px}.search input{flex:1;padding:10px;border:1px solid #d9e0e8;border-radius:8px}
+.footer{padding:25px 30px;color:#5d7167;font-size:12px;text-align:center;border-top:1px solid #dfe9e3;background:#f8fbf9}.footer:before{content:"PEMERINTAH KABUPATEN BENGKULU SELATAN • KESATUAN BANGSA DAN POLITIK";display:block;font-weight:700;color:#0b6b4f;margin-bottom:5px}
+
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:30;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.formbox{background:#fff;width:min(720px,100%);max-height:90vh;overflow:auto;border-radius:14px;padding:22px}.formbox h3{margin-top:0;color:var(--navy)}.formbox label{display:block;font-size:13px;font-weight:bold;margin-top:10px}.formbox input,.formbox select,.formbox textarea{width:100%;padding:10px;border:1px solid #d9e0e8;border-radius:8px;margin-top:5px}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formactions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.smallbtn{border:0;border-radius:7px;padding:7px 10px;cursor:pointer;font-size:12px}.editbtn{background:#edf4fb;color:var(--blue)}.delbtn{background:#fde9e9;color:#a73a3a}.addbtn{background:var(--blue);color:#fff}.member-count{font-size:12px;color:#667085;margin-left:8px}
+@media(max-width:900px){.sidebar{width:210px}.main{margin-left:210px}.cards{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}}
+@media (max-width: 650px) {
+    .hero .mark {
+        display: block;
+        width: 120px;
+        max-width: 35%;
+        max-height: 180px;
+        height: auto;
+        object-fit: contain;
+        align-self: flex-end;
+        flex: 0 1 120px;
+        transform: translateY(15px);
+    }
+}
+</style>
+
+<style id="sipomas-anggota-edit-style">
+#sipomasAnggotaBox{margin-top:20px;background:#fff;border-radius:12px;padding:18px;box-shadow:0 4px 15px #0001}
+#sipomasAnggotaBox table{width:100%;border-collapse:collapse}
+#sipomasAnggotaBox th,#sipomasAnggotaBox td{padding:10px;border-bottom:1px solid #e5e9e8;text-align:left}
+#sipomasAnggotaBox th{background:#0b5d4f;color:#fff}
+.sip-edit-btn{border:0;background:#0b5d4f;color:#fff;border-radius:6px;padding:6px 10px;cursor:pointer}
+.sip-save-btn{border:0;background:#d9a441;color:#fff;border-radius:6px;padding:6px 10px;cursor:pointer}
+.sip-num{width:95px;padding:7px;border:1px solid #ccd8d5;border-radius:6px}
+</style>
+<style id="sipomas-full-edit-css">
+#sipomasFullEdit{margin-top:22px;background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 18px #0001}
+#sipomasFullEdit table{width:100%;border-collapse:collapse;min-width:1250px}
+#sipomasFullEdit th,#sipomasFullEdit td{padding:10px;border-bottom:1px solid #e4e9e7;text-align:left;vertical-align:top}
+#sipomasFullEdit th{background:#0b5d4f;color:#fff}
+.sip-btn{border:0;border-radius:6px;padding:7px 11px;cursor:pointer;font-weight:bold}
+.sip-edit{background:#0b5d4f;color:#fff}.sip-del{background:#c0392b;color:#fff}
+#sipEditModal{display:none;position:fixed;inset:0;background:#0008;z-index:9999;align-items:center;justify-content:center;padding:15px}
+#sipEditModal.show{display:flex}.sip-modal{background:#fff;width:min(850px,100%);max-height:94vh;overflow:auto;border-radius:14px;padding:24px}
+.sip-modal h2{color:#0b5d4f}.sip-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sip-field label{display:block;font-weight:bold;margin:8px 0 5px}.sip-field input,.sip-field textarea{width:100%;padding:9px;border:1px solid #ccd8d5;border-radius:6px}.sip-full{grid-column:1/-1}.sip-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+@media(max-width:700px){.sip-grid{grid-template-columns:1fr}.sip-full{grid-column:auto}}
+</style>
+<style id="sip-dashboard-edit-css">
+#sipDashEdit{margin:18px 0;padding:14px 16px;background:#fff;border-radius:10px;box-shadow:0 3px 12px #0001;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sip-dashboard-btn{border:0;border-radius:7px;padding:9px 13px;background:#0b5d4f;color:#fff;font-weight:bold;cursor:pointer}
+#sipDashModal{display:none;position:fixed;inset:0;background:#0008;z-index:10000;align-items:center;justify-content:center;padding:15px}
+#sipDashModal.show{display:flex}.sip-dash-form{background:#fff;width:min(650px,100%);border-radius:14px;padding:24px}
+.sip-dash-form h2{color:#0b5d4f;margin-top:0}.sip-dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sip-dash-grid label{font-weight:bold;display:block}.sip-dash-grid input{width:100%;padding:10px;margin-top:5px;border:1px solid #ccd8d5;border-radius:6px}
+.sip-dash-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+@media(max-width:600px){.sip-dash-grid{grid-template-columns:1fr}}
+</style>
+<style id="sip-doc-edit-css">
+#sipDocEditor{margin:18px 0;padding:16px;background:#fff;border-radius:12px;box-shadow:0 3px 14px #0001}
+.sip-doc-btn{border:0;border-radius:7px;padding:9px 13px;background:#0b5d4f;color:#fff;font-weight:bold;cursor:pointer}
+.sip-doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:15px}
+.sip-doc-card{background:#f8faf9;border:1px solid #e1e8e5;border-radius:10px;padding:12px}
+.sip-doc-card img{width:100%;height:150px;object-fit:cover;border-radius:7px;background:#e8eeec}
+.sip-doc-card input,.sip-doc-card textarea{width:100%;padding:8px;margin-top:6px;border:1px solid #ccd8d5;border-radius:6px}
+.sip-doc-actions{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}
+.sip-doc-del{background:#c0392b}.sip-doc-edit{background:#0b5d4f}.sip-doc-save{background:#d9a441}
+</style></head>
+<body>
+<aside class="sidebar">
+ <div class="brand"><img class="logo" src="Kabupaten-Bengkulu-Selatan-Logo-removebg-preview.png" alt="Lambang Kabupaten Bengkulu Selatan"><div><b>SIPOMAS</b><small>Kesbangpol Bengkulu Selatan</small></div></div>
+ <nav>
+  <a class="active" href="#" onclick="show('dashboard',this)">▣ &nbsp; Dashboard</a>
+  <a href="#" onclick="show('profil',this)">◈ &nbsp; Profil SIPOMAS</a>
+  <a href="#" onclick="show('ormas',this)">▤ &nbsp; Data ORMAS</a>
+  <a href="#" onclick="show('monitoring',this)">◉ &nbsp; Monitoring & Pengawasan</a>
+  <a href="#" onclick="show('pembinaan',this)">♧ &nbsp; Pembinaan</a>
+  <a href="#" onclick="show('laporan',this)">▥ &nbsp; Laporan</a>
+  <a href="#" onclick="show('dokumentasi',this)">▧ &nbsp; Dokumentasi</a>
+ </nav>
+</aside>
+<main class="main">
+<header class="top"><div><h2 id="pageTitle">Dashboard SIPOMAS</h2><div style="font-size:11px;color:#0b6b4f;font-weight:700;letter-spacing:.5px;margin-top:3px">PEMERINTAH KABUPATEN BENGKULU SELATAN</div></div><div class="user"><b style="color:#0b6b4f">KESBANGPOL</b> &nbsp;•&nbsp; Kabupaten Bengkulu Selatan</div></header>
+<div class="content">
+
+<section id="dashboard" class="section active">
+ <div class="hero"><div><span class="badge">AKSI PERUBAHAN • DIGITALISASI DATA</span><h1>SIPOMAS</h1><p>Sistem Informasi Pendataan dan Informasi Organisasi Kemasyarakatan Kabupaten Bengkulu Selatan untuk mendukung pendataan, pembinaan, monitoring, dan pengawasan ORMAS secara lebih terintegrasi.</p></div><img class="mark" src="bupati_bs-removebg-preview.png" alt="Bupati dan Wakil Bupati Bengkulu Selatan"></div>
+ <div class="cards">
+  <div class="card"><div class="label">Total ORMAS Terdata</div><div class="value">86</div><div class="delta">↑ 12% tahun ini</div></div>
+  <div class="card"><div class="label">Dokumen Lengkap</div><div class="value">71</div><div class="delta">82,6% dari total data</div></div>
+  <div class="card"><div class="label">Perlu Pembinaan</div><div class="value">9</div><div class="delta">Prioritas ditindaklanjuti</div></div>
+  <div class="card"><div class="label">Monitoring Tahun Ini</div><div class="value">43</div><div class="delta">Kegiatan tercatat</div></div>
+ </div>
+ <div class="grid">
+  <div class="panel"><h3>Sebaran ORMAS per Kecamatan</h3><div class="bars">
+   <div><div class="barlabel"><span>Kota Manna</span><b>22</b></div><div class="bar"><div class="fill" style="width:88%"></div></div></div>
+   <div><div class="barlabel"><span>Pasar Manna</span><b>18</b></div><div class="bar"><div class="fill" style="width:72%"></div></div></div>
+   <div><div class="barlabel"><span>Pino</span><b>14</b></div><div class="bar"><div class="fill" style="width:56%"></div></div></div>
+   <div><div class="barlabel"><span>Ulu Manna</span><b>11</b></div><div class="bar"><div class="fill" style="width:44%"></div></div></div>
+   <div><div class="barlabel"><span>Seginim & kecamatan lainnya</span><b>21</b></div><div class="bar"><div class="fill" style="width:84%"></div></div></div>
+  </div></div>
+  <div class="panel"><h3>Informasi Terkini</h3>
+   <div class="notice"><b>Pembaruan data:</b> 6 ORMAS telah memperbarui dokumen administrasi.</div>
+   <div class="notice"><b>Monitoring:</b> 3 agenda monitoring menunggu verifikasi hasil.</div>
+   <div class="notice"><b>Pembinaan:</b> Jadwal pembinaan ORMAS periode berikutnya perlu ditetapkan.</div>
+  </div>
+ </div>
+</section>
+
+<section id="profil" class="section">
+ <div class="panel"><h3>Profil SIPOMAS</h3>
+ <p><b>SIPOMAS (Sistem Informasi Pendataan dan Informasi Organisasi Kemasyarakatan)</b> merupakan inovasi digital dalam mendukung pelaksanaan pembinaan dan pengawasan organisasi kemasyarakatan di Kabupaten Bengkulu Selatan.</p>
+ <h3>Tujuan</h3><ul><li>Menyediakan data ORMAS yang terintegrasi dan mudah diperbarui.</li><li>Meningkatkan efektivitas monitoring dan pembinaan.</li><li>Menyediakan informasi yang cepat untuk kebutuhan pimpinan.</li><li>Mendukung pengambilan keputusan berbasis data.</li></ul>
+ <h3>Perubahan yang Diharapkan</h3><table><tr><th>Sebelum</th><th>Sesudah</th></tr><tr><td>Data tersebar dalam dokumen/manual.</td><td>Data tersimpan secara digital dan terstruktur.</td></tr><tr><td>Monitoring belum terdokumentasi terpusat.</td><td>Monitoring dan tindak lanjut tercatat dalam sistem.</td></tr><tr><td>Laporan membutuhkan rekap manual.</td><td>Dashboard dan laporan dapat disusun lebih cepat.</td></tr></table>
+ </div>
+</section>
+
+<section id="ormas" class="section">
+ <div class="panel"><h3>Data Organisasi Kemasyarakatan</h3>
+ <div class="search"><input id="search" onkeyup="renderOrmas()" placeholder="Cari nama ORMAS, kecamatan, atau status..."><button class="btn" onclick="openOrmas()">+ Tambah Data</button></div>
+ <table id="ormasTable"><thead><tr><th>No</th><th>Nama ORMAS</th><th>Kecamatan</th><th>Ketua</th><th>Status</th><th>Kelengkapan</th><th>Aksi</th></tr></thead><tbody id="ormasBody"></tbody></table></div>
+</section>
+
+<section id="anggota" class="section">
+ <div class="panel"><h3>Data Anggota ORMAS <span class="member-count" id="memberCount"></span></h3>
+ <div class="search"><input id="memberSearch" onkeyup="renderMembers()" placeholder="Cari nama anggota, ORMAS, jabatan, atau alamat..."><button class="btn" onclick="openMember()">+ Tambah Anggota</button></div>
+ <table><thead><tr><th>No</th><th>Nama Anggota</th><th>ORMAS</th><th>Jabatan</th><th>JK</th><th>No. HP</th><th>Aksi</th></tr></thead><tbody id="memberBody"></tbody></table></div>
+</section>
+
+<section id="monitoring" class="section"><div class="panel"><h3>Monitoring & Pengawasan</h3><table><tr><th>Kegiatan</th><th>Wilayah</th><th>Tanggal</th><th>Status</th></tr><tr><td>Monitoring administrasi ORMAS</td><td>Kota Manna</td><td>12/09/2026</td><td><span class="status ok">Selesai</span></td></tr><tr><td>Verifikasi data ORMAS</td><td>Pasar Manna</td><td>18/09/2026</td><td><span class="status warn">Verifikasi</span></td></tr><tr><td>Pemantauan kegiatan ORMAS</td><td>Pino</td><td>25/09/2026</td><td><span class="status ok">Selesai</span></td></tr></table></div></section>
+
+<section id="pembinaan" class="section"><div class="panel"><h3>Program Pembinaan ORMAS</h3><div class="notice"><b>Agenda:</b> Sosialisasi dan pembinaan administrasi organisasi kemasyarakatan.</div><table><tr><th>Kegiatan</th><th>Target</th><th>Status</th></tr><tr><td>Sosialisasi tertib administrasi</td><td>20 ORMAS</td><td><span class="status ok">Terjadwal</span></td></tr><tr><td>Konsultasi kelembagaan</td><td>10 ORMAS</td><td><span class="status warn">Persiapan</span></td></tr></table></div></section>
+
+<section id="laporan" class="section"><div class="panel"><h3>Laporan & Rekapitulasi</h3><div class="cards"><div class="card"><div class="label">Rekap Data</div><div class="value">86</div></div><div class="card"><div class="label">Monitoring</div><div class="value">43</div></div><div class="card"><div class="label">Pembinaan</div><div class="value">18</div></div><div class="card"><div class="label">Tindak Lanjut</div><div class="value">15</div></div></div><button class="btn" onclick="alert('Pada versi produksi, tombol ini dapat menghasilkan PDF/Excel.')">Cetak Laporan</button></div></section>
+
+<section id="dokumentasi" class="section"><div class="panel"><h3>Dokumentasi Aksi Perubahan</h3><p>Tempat untuk menampilkan foto sosialisasi, koordinasi, uji coba SIPOMAS, monitoring, dan kegiatan pembinaan.</p><div class="grid"><div class="notice"><b>Dokumentasi 01</b><br>Rapat koordinasi tim aksi perubahan.</div><div class="notice"><b>Dokumentasi 02</b><br>Sosialisasi dan uji coba sistem.</div><div class="notice"><b>Dokumentasi 03</b><br>Monitoring data ORMAS.</div><div class="notice"><b>Dokumentasi 04</b><br>Evaluasi implementasi.</div></div></div></section>
+
+</div>
+<div class="footer">Prototype SIPOMAS • Aksi Perubahan Kesbangpol Kabupaten Bengkulu Selatan • Data pada prototype ini adalah data contoh.</div>
+</main>
+<div class="modal" id="ormasModal"><div class="formbox"><h3 id="ormasFormTitle">Tambah Data ORMAS</h3><input type="hidden" id="ormasId"><label>Nama ORMAS *</label><input id="ormasNama"><div class="formrow"><div><label>Kecamatan</label><input id="ormasKec"></div><div><label>Ketua</label><input id="ormasKetua"></div></div><div class="formrow"><div><label>Status</label><select id="ormasStatus"><option>Aktif</option><option>Pembinaan</option><option>Perlu Verifikasi</option><option>Tidak Aktif</option></select></div><div><label>Kelengkapan</label><select id="ormasLengkap"><option>Lengkap</option><option>Perlu pembaruan</option><option>Belum lengkap</option></select></div></div><div class="formactions"><button class="btn secondary" onclick="closeModal('ormasModal')">Batal</button><button class="btn" onclick="saveOrmas()">Simpan</button></div></div></div>
+<div class="modal" id="memberModal"><div class="formbox"><h3 id="memberFormTitle">Tambah Anggota ORMAS</h3><input type="hidden" id="memberId"><label>Nama Anggota *</label><input id="memberNama"><div class="formrow"><div><label>ORMAS</label><input id="memberOrmas"></div><div><label>Jabatan</label><input id="memberJabatan"></div></div><div class="formrow"><div><label>Jenis Kelamin</label><select id="memberJK"><option>Laki-laki</option><option>Perempuan</option></select></div><div><label>No. HP</label><input id="memberHp"></div></div><label>Alamat</label><textarea id="memberAlamat" rows="2"></textarea><div class="formactions"><button class="btn secondary" onclick="closeModal('memberModal')">Batal</button><button class="btn" onclick="saveMember()">Simpan</button></div></div></div>
+<script>
+const OK='sipomas_ormas_v2', MK='sipomas_members_v2';
+let ormas=JSON.parse(localStorage.getItem(OK)||'null')||[
+{id:1,nama:'Contoh Organisasi Masyarakat A',kec:'Kota Manna',ketua:'Nama Ketua',status:'Aktif',lengkap:'Lengkap'},
+{id:2,nama:'Contoh Organisasi Masyarakat B',kec:'Pasar Manna',ketua:'Nama Ketua',status:'Aktif',lengkap:'Lengkap'},
+{id:3,nama:'Contoh Organisasi Masyarakat C',kec:'Pino',ketua:'Nama Ketua',status:'Pembinaan',lengkap:'Perlu pembaruan'}];
+let members=JSON.parse(localStorage.getItem(MK)||'null')||[];
+function saveStore(){localStorage.setItem(OK,JSON.stringify(ormas));localStorage.setItem(MK,JSON.stringify(members))}
+function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function show(id,el){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));el.classList.add('active');const titles={dashboard:'Dashboard SIPOMAS',profil:'Profil SIPOMAS',ormas:'Data Organisasi Kemasyarakatan',anggota:'Data Anggota ORMAS',monitoring:'Monitoring & Pengawasan',pembinaan:'Pembinaan ORMAS',laporan:'Laporan & Rekapitulasi',dokumentasi:'Dokumentasi Aksi Perubahan'};document.getElementById('pageTitle').textContent=titles[id];if(id==='ormas')renderOrmas();if(id==='anggota')renderMembers();window.scrollTo(0,0)}
+function renderOrmas(){const q=(document.getElementById('search')?.value||'').toLowerCase();document.getElementById('ormasBody').innerHTML=ormas.filter(x=>Object.values(x).join(' ').toLowerCase().includes(q)).map((x,i)=>`<tr><td>${i+1}</td><td><b>${esc(x.nama)}</b></td><td>${esc(x.kec)}</td><td>${esc(x.ketua)}</td><td><span class="status ${x.status==='Aktif'?'ok':x.status==='Pembinaan'?'warn':'danger'}">${esc(x.status)}</span></td><td>${esc(x.lengkap)}</td><td><button class="smallbtn editbtn" onclick="editOrmas(${x.id})">Edit</button> <button class="smallbtn delbtn" onclick="deleteOrmas(${x.id})">Hapus</button></td></tr>`).join('')}
+function openOrmas(id=null){document.getElementById('ormasModal').classList.add('show');document.getElementById('ormasFormTitle').textContent=id?'Edit Data ORMAS':'Tambah Data ORMAS';document.getElementById('ormasId').value=id||'';let x=ormas.find(a=>a.id===id)||{};document.getElementById('ormasNama').value=x.nama||'';document.getElementById('ormasKec').value=x.kec||'';document.getElementById('ormasKetua').value=x.ketua||'';document.getElementById('ormasStatus').value=x.status||'Aktif';document.getElementById('ormasLengkap').value=x.lengkap||'Lengkap'}
+function editOrmas(id){openOrmas(id)}
+function saveOrmas(){let nama=document.getElementById('ormasNama').value.trim();if(!nama)return alert('Nama ORMAS wajib diisi.');let id=Number(document.getElementById('ormasId').value);let obj={id:id||Date.now(),nama,kec:document.getElementById('ormasKec').value,ketua:document.getElementById('ormasKetua').value,status:document.getElementById('ormasStatus').value,lengkap:document.getElementById('ormasLengkap').value};if(id){ormas=ormas.map(x=>x.id===id?obj:x)}else ormas.push(obj);saveStore();closeModal('ormasModal');renderOrmas()}
+function deleteOrmas(id){if(confirm('Hapus data ORMAS ini?')){ormas=ormas.filter(x=>x.id!==id);saveStore();renderOrmas()}}
+function renderMembers(){let q=(document.getElementById('memberSearch')?.value||'').toLowerCase();let rows=members.filter(x=>Object.values(x).join(' ').toLowerCase().includes(q));document.getElementById('memberBody').innerHTML=rows.map((x,i)=>`<tr><td>${i+1}</td><td><b>${esc(x.nama)}</b></td><td>${esc(x.ormas)}</td><td>${esc(x.jabatan)}</td><td>${esc(x.jk)}</td><td>${esc(x.hp)}</td><td><button class="smallbtn editbtn" onclick="openMember(${x.id})">Edit</button> <button class="smallbtn delbtn" onclick="deleteMember(${x.id})">Hapus</button></td></tr>`).join('');document.getElementById('memberCount').textContent=`(${members.length} anggota)`}
+function openMember(id=null){document.getElementById('memberModal').classList.add('show');document.getElementById('memberFormTitle').textContent=id?'Edit Anggota ORMAS':'Tambah Anggota ORMAS';document.getElementById('memberId').value=id||'';let x=members.find(a=>a.id===id)||{};['Nama','Ormas','Jabatan','Hp','Alamat'].forEach(k=>document.getElementById('member'+k).value=x[k.toLowerCase()]||'');document.getElementById('memberJK').value=x.jk||'Laki-laki'}
+function saveMember(){let nama=document.getElementById('memberNama').value.trim();if(!nama)return alert('Nama anggota wajib diisi.');let id=Number(document.getElementById('memberId').value);let obj={id:id||Date.now(),nama,ormas:document.getElementById('memberOrmas').value,jabatan:document.getElementById('memberJabatan').value,jk:document.getElementById('memberJK').value,hp:document.getElementById('memberHp').value,alamat:document.getElementById('memberAlamat').value};if(id)members=members.map(x=>x.id===id?obj:x);else members.push(obj);saveStore();closeModal('memberModal');renderMembers()}
+function deleteMember(id){if(confirm('Hapus anggota ini?')){members=members.filter(x=>x.id!==id);saveStore();renderMembers()}}
+function closeModal(id){document.getElementById(id).classList.remove('show')}
+renderOrmas();
+</script>
+
+<script id="sipomas-anggota-edit-script">
+(function(){
+ const KEY="sipomas_jumlah_anggota_2026";
+ const seed=[{"id": 1, "nama": "Dpc Ippsa Manna", "ketua": "Rizki Fernando", "jumlahAnggota": 30}, {"id": 2, "nama": "Lembaga Swadaya Masyarakat Sekundang Mandiri (Lsm Sm)", "ketua": "Jon Kanedi,S.Ip", "jumlahAnggota": 20}, {"id": 3, "nama": "Lkatan Pemuda Pemudl Maim Bau (Ippm)", "ketua": "Syaprizal", "jumlahAnggota": 50}, {"id": 4, "nama": "Team Operasional Penyelamat Asset Negara Republik Indonesia (Topan)", "ketua": "Oni Lufti, Sh", "jumlahAnggota": 12}, {"id": 5, "nama": "Pokdar Kamtibmas Resor      Bengkulu Selatan", "ketua": "Agam Yayan Sari S.Pd", "jumlahAnggota": 319}, {"id": 6, "nama": "Organisasi              Pemuda Betunggal Pasar Bawah", "ketua": "Maroni", "jumlahAnggota": 31}, {"id": 7, "nama": "Mdt Al-Khair", "ketua": "Khairani, S.Pd., M.Tpd.", "jumlahAnggota": 50}, {"id": 8, "nama": "Pemuda Batak Bersatu", "ketua": "Deri Sagala", "jumlahAnggota": 306}, {"id": 9, "nama": "Jaringan Pendamping Kebijakan Pembangunan (Jpkp)", "ketua": "Ruslan Mojoarjo, S.Sos", "jumlahAnggota": 18}, {"id": 10, "nama": "Badan Musyawarah Adat (Bma) Bengkulu Selatan", "ketua": "Alwis, Sh", "jumlahAnggota": 63}, {"id": 11, "nama": "Ikatan Keluarga Minang (Ikm)", "ketua": "H.Hasan Nurdin Sh. M.Kn", "jumlahAnggota": 1350}, {"id": 12, "nama": "Organisasi Pemuda Kutau (Opek)", "ketua": "Todi Haryanto", "jumlahAnggota": 67}, {"id": 13, "nama": "Paguyuban Masyarakat Jawa\nBengkulu\n(Pmjb) Kabupaten Bengkulu Selatan", "ketua": "Sidiq Budiyono, S.S", "jumlahAnggota": 5125}];
+ let data=JSON.parse(localStorage.getItem(KEY)||"null");
+ if(!Array.isArray(data)||data.length===0) data=seed;
+ function save(){localStorage.setItem(KEY,JSON.stringify(data));}
+ function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+ function findSection(){
+   const headings=[...document.querySelectorAll("h1,h2,h3,h4,h5")];
+   return headings.find(h=>/data.*ormas|organisasi.*kemasyarakatan|ormas/i.test(h.textContent));
+ }
+ function render(){
+   let box=document.getElementById("sipomasAnggotaBox");
+   if(!box){
+     box=document.createElement("div"); box.id="sipomasAnggotaBox";
+     const sec=findSection();
+     if(sec){sec.parentElement.appendChild(box);} else {document.body.appendChild(box);}
+   }
+   const total=data.reduce((s,x)=>s+(Number(x.jumlahAnggota)||0),0);
+   box.innerHTML=`<h3 style="margin-top:0;color:#0b5d4f">Jumlah Anggota ORMAS</h3>
+   <p style="color:#66736f">Jumlah anggota berasal dari data ORMAS 2026 dan dapat diedit.</p>
+   <div style="margin-bottom:12px"><b>Total anggota: ${total.toLocaleString("id-ID")}</b></div>
+   <div style="overflow:auto"><table><thead><tr><th>No</th><th>Nama ORMAS</th><th>Ketua</th><th>Jumlah Anggota</th><th>Aksi</th></tr></thead>
+   <tbody>${data.map((x,i)=>`<tr><td>${i+1}</td><td><b>${esc(x.nama)}</b></td><td>${esc(x.ketua)}</td><td><input class="sip-num" id="jml-${x.id}" type="number" min="0" value="${Number(x.jumlahAnggota)||0}" disabled></td><td><button class="sip-edit-btn" onclick="window.sipEdit(${x.id})">Edit</button></td></tr>`).join("")}</tbody></table></div>`;
+ }
+ window.sipEdit=function(id){
+   const input=document.getElementById("jml-"+id);
+   if(!input)return;
+   if(input.disabled){input.disabled=false;input.focus();input.select();input.nextElementSibling}
+   const btn=input.parentElement.nextElementSibling.querySelector("button");
+   if(btn){btn.textContent="Simpan";btn.className="sip-save-btn";btn.onclick=function(){
+      const x=data.find(a=>a.id===id); if(x)x.jumlahAnggota=Math.max(0,Number(input.value)||0);
+      save();render();
+   };}
+ };
+ window.sipRenderAnggota=render;
+ document.addEventListener("DOMContentLoaded",render);
+ setTimeout(render,400);
+})();
+</script>
+<script id="sipomas-full-edit-js">
+(function(){
+const KEY="sipomas_semua_data_ormas";
+const seed=[{"id": 1, "nama": "Dpc Ippsa Manna", "sk": "Ahu-0001195.Ah.01.07 Tahun 2025", "periode": "2025-2027", "status": "Cabang", "ketua": "Rizki Fernando", "sekretaris": "Anisa Nur Rahma Daniaty", "bendahara": "Amar Suandi", "jumlahAnggota": 30, "alamat": "Jl. Affan Bachian Ii Kel,Pasar Mulia Kec,Pasar Manna Kab,Bengkulu Selatan Prov,Bengkulu", "telepon": "085784814811", "bidang": "Agama, Sosial", "detail": "-Tanggal 6 Maret 2026 Memperingati Nuzur Qur'An Tahun 1447 H"}, {"id": 2, "nama": "Lembaga Swadaya Masyarakat Sekundang Mandiri (Lsm Sm)", "sk": "W21-0109.Um.07.10.Th2\n2008\nAkta Notaris : No : 08 Tanggal 12\nMaret 2008", "periode": "2026 - 2031", "status": "Cabang", "ketua": "Jon Kanedi,S.Ip", "sekretaris": "Jasrul Rahmadan", "bendahara": "Dahirlan", "jumlahAnggota": 20, "alamat": "Jl. Samsul Bahrun No.74 Tebat Kubu Kota Manna Kabupaten Bengkulu Selatan Provinsi Bengkulu\n081367697951 /\n081279532212", "telepon": "081367697951", "bidang": "Pembangunan", "detail": "1. 16 Januari 2025\nMengikuti Konsultasi Publik Rancangan Awal Rkpd Tahun 2026 Di Bappeda Letbang Bs.\n2. 27 Februari 2025\nMengikuti Rapat Musrenbang Rkpd Kabupaten Bengkulu Selatan Di Bappeda Letbang Bs.\n3. 08 Juli 2025\nMengikuti Konsultasi Publik Rancangan Awal Rpjmd Tahun 2025 – 2029 Di Bappeda Letbang Bs.\n4. 04 September 2025\nMengikuti Musrenbang Rpjmd Tahun 2025 – 2029 Kabupaten Bengkulu Selatan\n5. 10 Februari 2026\nMelakukan Pemantauan Kegiatan Pembangunan Wilayah Bengkulu Selatan\n6. 15 Maret 2026\nMelakukan Sosialisasi Tentang Bahaya Narkoba Dalam Wilayah Bengkulu Selatan\n7. 21 April 2026\nMelakukan Pemantauan Tentang Penyaluran Minyak Subsidi Pada Spbu Se-Bengkulu Selatan\n8. 05 Agustus 2026\nMengikuti Rapat Koordinasi Organisasi\nLembaga Pemasyarakatan Se-Bengkulu Selatan"}, {"id": 3, "nama": "Lkatan Pemuda Pemudl Maim Bau (Ippm)", "sk": "Nomor : 00-17 0027/1I1/2017", "periode": "2022-2027", "status": "Cabang", "ketua": "Syaprizal", "sekretaris": "Endang Syafran", "bendahara": "Feri Susanto", "jumlahAnggota": 50, "alamat": "Ii. Harapan  No. 45 Rt. 12 Kel. Pd.\nSialang  Kec. Pasar Marina Kab. Bengkulu Selatan Provinsi Bengkulu", "telepon": "082310093860", "bidang": "Sosial", "detail": "Tanggal 08 April 2026 : Memberikan Santunan  Terhadap Korban Anak Kecil Yang Tersiran Air Panas Di Bunga Mas\nTanggal 22 Mer 2026 : Membantu Perbaikan Jalan Dan Pembersihan  Areal Sampah Di Pasar Ampera  08 .Luni 2026 : Memberi Santunan Kepada Penderita Tumor Payudara Lbu Septi Di Pd. Kapuk, Manna Tanggal 18 Juli 2026 : Memberi Santunan Kepada Penderita Tumor Otak (Anak-Anak)\nTanggal 03 Agustus 2026 . Memberikan Santunan Dan Membantu Pembangunan Menara  Masjid Serambi Makkah, Manna"}, {"id": 4, "nama": "Team Operasional Penyelamat Asset Negara Republik Indonesia (Topan)", "sk": "Ahu-0001729.Ah.01.07 Tahun 2015", "periode": "2025 -2029", "status": "Cabang", "ketua": "Oni Lufti, Sh", "sekretaris": "Yulius Hilmawan", "bendahara": "Winsyahari", "jumlahAnggota": 12, "alamat": "Jalan Raya Kedurang, Kecamatan Kedurang, Kabupaten Bengkulu Selatan", "telepon": "082183907999", "bidang": "Sosial", "detail": "Tanggal 20 Mei  2026\n-  Melaksanakan Penyaluran Bantuan Sembako Kepada  Warga Masyarakat Yang Membutuhkan\nTanggal 05 Agustus 2026\n-  Sosialisasi Tugas Dan Fungsi Kesbangpol Kabupaten Bengkulu Selatan Terhadap Pembinaan Ormas Dan Lsm"}, {"id": 5, "nama": "Pokdar Kamtibmas Resor      Bengkulu Selatan", "sk": "1.  Surat  Telegram  Kapolri  No: St/2492/Ix/Huk.6/2019\nTanggal 18 September 2019\n2.  Skep No:\n023/Kd-Bengkulu\n/Vii/2025", "periode": "2025-2030", "status": "Cabang", "ketua": "Agam Yayan Sari S.Pd", "sekretaris": "Luman Suhan, Sh", "bendahara": "Tulus Hartanu", "jumlahAnggota": 319, "alamat": "Jln.     Lettu     Ubadi Gang  Benteng  Kec. Pasar  Manna  Kab. Bengkulu Selatan", "telepon": "085273772079", "bidang": "Sosial, Ekonomi, Keamanan", "detail": "-    Tanggal     02     Januari     Menggalang Masyarakat  Di Wilayah Polsek  Manna Untuk       Melakukan       Penyelesaian Permasalahan           Dengan           Cara Kekeluargaan (Restorasi Justice)\n-    Membuat         Perlombaan         Dalam Meningkatkan        Kerukunan        Dan Silaturahim    Di    Wilayah    Kabupaten Bengkulu Selatan\n-    Pembentukan    Pengurus    Di    Sektor Wilayah  Di  11  Kecamatan  Bengkulu Selatan\n-    Sosialasi   Di   Kapolres   Melalui   Kasat Binmas   Tentang   Tindak   Lanjut   Dan Kegiatan            Bersama            Dengan Pokdarkamtibmas    Resor    Bengkulu Selatan"}, {"id": 6, "nama": "Organisasi              Pemuda Betunggal Pasar Bawah", "sk": "Ahu.83.Ah.02.01-Th   2008   Tgl   25\nFebruari 2008\nTanggal    10    Juli\n2025 No 02", "periode": "2025-2030", "status": "Cabang", "ketua": "Maroni", "sekretaris": "Ranggana Febrianto", "bendahara": "Marsuandi", "jumlahAnggota": 31, "alamat": "Jalan  Letnan  Jahidin Rt.    003    Kelurahan Pasar               Bawah Kecamatan       Pasar Manna\nKabupaten  Bengkulu Selatan", "telepon": "085839711565", "bidang": "Ekonomi Dan Sosial", "detail": "Tanggal 15 Maret 2026\n- Pembersihan  Area Pelelangan  Ikan Kawasan  Pantai Pasar Bawah.\n- Pengelolaan Aset Perikanan Serta Perawatan. Tanggal 26 April 2026\n- Sosialisai Pedagang Kawasan Pantai Pasar Bawah. Tanggal 15  Mei 2026\n-   Pembersihan   Serta   Perapihan   Aset   Pariwisata\nKabupaten Bengkulu Selatan."}, {"id": 7, "nama": "Mdt Al-Khair", "sk": "No. Statistik : 412170101025", "periode": "2024-2029", "status": "Cabang", "ketua": "Khairani, S.Pd., M.Tpd.", "sekretaris": "Abdurrahman Al Farisi, S.M", "bendahara": "Fadillah Nurzakirah, S.Pd.I", "jumlahAnggota": 50, "alamat": "Jl. Smkn 1, Kel. Ibul,\nKec. Kota Manna, Kabupaten Bengkulu Selatan.", "telepon": "085252668684", "bidang": "Pendidikan", "detail": "1.    Tanggal 15 Januari 2026 Melaksanakan Pembukaan Semester\nGenap Dan Pengajian Wali Santri\n2.    Tanggal 8 Februari 2026 Pelatihan Tahsin Al-Qur’An\n3.    Tanggal 18 Maret 2026 Kegiatan Pesantren Ramadhan\n4.    Tanggal 22 April 2026 Pelaksanaan Lomba Hafalan Surah Pendek, Adzan, Dan Praktik Sholat\n5.    Tanggal 18 Mei 2026 Penerimaan Penghargaan Santri Berprestasi\n6.    Tanggal 8 Juni 2026 Gotong Royong Membersihkan Ruang Kelas"}, {"id": 8, "nama": "Pemuda Batak Bersatu", "sk": "Terdaftar Di\nKementerian  Hukum & Ham Rl\nNo. Ahu-0010985.Ah.01.07 Tahun 2019\nTerdaftar Di Kesbagpol Kabupaten Bengkulu Selatan Nomor : 800 / 01\n/Bkbp / V / 2025", "periode": "2023 — 2028", "status": "Cabang", "ketua": "Deri Sagala", "sekretaris": "Frengki L.H. Sinaga, Sh", "bendahara": "Jenni Barns", "jumlahAnggota": 306, "alamat": "Jln. Kolonel  Berlian Rt. 09 Kel. Kota Medan Kec.Kota Manna", "telepon": "082307277095", "bidang": "Sosial", "detail": "1. 20 Juli 2026 Penyerahan Draft Perda Usulan Pemuda Batak Bersatu Berkenaan Pencegahan Dan Penanggulangan Tawuran Dan Tindakan Anarkis Peserta Didik Kabupaten Bengkulu Selatan"}, {"id": 9, "nama": "Jaringan Pendamping Kebijakan Pembangunan (Jpkp)", "sk": "Nomor : 0001682.Ah.01.07 Tahun 2015", "periode": "2025 – 2030", "status": "Cabang", "ketua": "Ruslan Mojoarjo, S.Sos", "sekretaris": "Jon Pranata", "bendahara": "Sofian Iswandi", "jumlahAnggota": 18, "alamat": "Desa Padang Jawi Kecamatan Bunga Mas Kabupaten Bengkulu Selatan", "telepon": "", "bidang": "Sosial", "detail": "-  16 Juni 2026\nMembantu Pembuatan Wc Warga Kurang Mampu Di Kecamatan Kedurang\n-  11 Agustus 2026 Membantu Sd Di Kecamatan Bunga Mas Seng 1 Kodi Karena Atap Bocor"}, {"id": 10, "nama": "Badan Musyawarah Adat (Bma) Bengkulu Selatan", "sk": "Nomor Badan Hukum : 800/13/Bkbp/X/2025", "periode": "2025 – 2030", "status": "Cabang", "ketua": "Alwis, Sh", "sekretaris": "Ruslan Mojoarjo, S.Sos", "bendahara": "Dedi Julihandri, S.Pd", "jumlahAnggota": 63, "alamat": "Jl. Padang Panjang Kota Manna", "telepon": "", "bidang": "Adat, Budaya Daerah", "detail": "-  08 Juni 2026\nPembentukan Bma Ulu Manna\n-  17 Agustus 2026 Pelantikan Bma Kecamatan Pino Raya\n-  31 Agustus 2026 Sosialisasi Perda No. 6 Tahun 2024 Di Kel.\nPasar Bawah\n-  2 September 2026 Cuci Kampong Di Desa Sindang Bulan Kec.\nSeginim"}, {"id": 11, "nama": "Ikatan Keluarga Minang (Ikm)", "sk": "Nomor C148 C.Ht.33.02. Tahun\n2002 Tanggal 12 Maret 2002 Dki Jakarta", "periode": "2022 - 2027", "status": "Cabang", "ketua": "H.Hasan Nurdin Sh. M.Kn", "sekretaris": "Widiasatna", "bendahara": "Asn Jambak", "jumlahAnggota": 1350, "alamat": "Jalan Jenderal Sudirman Rt. 02 Kelurahan Pasar Mulia Kecamatan Pasar Manna", "telepon": "081314198423", "bidang": "Sosial,Dan Agama", "detail": "Tanggal 21 Maret 2026 Pawai Obor Takbiran Akbar Menyambut Hari Raya Idul Fitri"}, {"id": 12, "nama": "Organisasi Pemuda Kutau (Opek)", "sk": "Nomor : 800 / 02 / Bpkp / Viii / 2024", "periode": "2022-2027", "status": "Cabang", "ketua": "Todi Haryanto", "sekretaris": "Bambang Agustiawan", "bendahara": "Sandro Novriadi", "jumlahAnggota": 67, "alamat": "Jl. Raja Khalifah Kelurahan Kota Medan Kecamamatan Kota Manna", "telepon": "081367408931", "bidang": "Sosial", "detail": "-     16 April 2026 Cek Kesehatan Gratis Di Posko Opek Bersama Puskesmas Kota Manna\n-     1 Mei 2026 Kebersihan Pohon Tumbang Di Tpu Gg. Pramuka\n-     1 Juni 2026 Membantu Penggalian Makam Warga Rt 03 Kota Medan\n-     13 Juni 2026 Membantu Penggalian Kubur Pak Buyung Warga Rt 02\n-     15 Juni 2026 Pawai Obor Bersama Jemaah Mesjid Serambi Mekkah\n-     17 Juni 2026 Acara Di Polres B/S\n-     19 Juni 2026 Membantu Pesta Di Rumah Warga Rt 07 Kota Medan\n-     30 Juni 2026 Upacara Bayangkara Lapangan Sekundang\n-     4 Juli 2026 Acara Di Posko Bersama Anak Kkn Unib\n-     5 Juli 2026 Penggalian Makam Warga Rt 07 Kota Medan\n-     19 Juli 2026 Nobar Piala Dunia"}, {"id": 13, "nama": "Paguyuban Masyarakat Jawa\nBengkulu\n(Pmjb) Kabupaten Bengkulu Selatan", "sk": "Notaris : Nomor 32\nTahun 2017 Tanggal 19\nDesember 2017 Surat Kepala Kesbangpol Nomor :\n800/14/Bkbp/X/2025\nTanggal 29 Oktober 2025", "periode": "2025 S/D 2030", "status": "Cabang", "ketua": "Sidiq Budiyono, S.S", "sekretaris": "Iskak Marjoko, Sp", "bendahara": "H.Suminto, S.Pd", "jumlahAnggota": 5125, "alamat": "H. Lintas Manna — Bengkulu  Km. 5  Kurawan,Desa Tanggo Raso Kec. Pino Raya, Kab. Bengkulu Selatan", "telepon": "085355417389", "bidang": "Sosial, Budaya", "detail": "-   Tanggal 4 Pebruari 2026, Acara Megengan.\n-   Tanggal 20 Maret 2026, Pendistribusian Zakat Fitrah\n-   Tanggal 20 September 2026, Melaksanakan Gebyar Budaya Bumi Sekundang Setungguan Di Lapangan Sekundang."}];
+let data=JSON.parse(localStorage.getItem(KEY)||"null"); if(!Array.isArray(data)||!data.length)data=seed;
+const fields=[
+ ["nama","Nama ORMAS"],["sk","Nomor SK / Badan Hukum"],["periode","Periode / Masa Berlaku"],
+ ["status","Status Kepengurusan"],["ketua","Ketua"],["sekretaris","Sekretaris"],["bendahara","Bendahara"],
+ ["jumlahAnggota","Jumlah Anggota"],["alamat","Alamat"],["telepon","Nomor Telepon"],["bidang","Bidang Kegiatan"],["detail","Detail Kegiatan"]
+];
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+function save(){localStorage.setItem(KEY,JSON.stringify(data));}
+function render(){
+ let box=document.getElementById("sipomasFullEdit");
+ if(!box){box=document.createElement("div");box.id="sipomasFullEdit";let h=[...document.querySelectorAll("h1,h2,h3")].find(x=>/data.*ormas|organisasi.*kemasyarakatan|ormas/i.test(x.textContent));(h?.parentElement||document.body).appendChild(box);}
+ const total=data.reduce((s,x)=>s+(Number(x.jumlahAnggota)||0),0);
+ box.innerHTML=`<div style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap">
+ <div><h2 style="margin:0;color:#0b5d4f">Data ORMAS</h2><small>${data.length} ORMAS • ${total.toLocaleString("id-ID")} anggota</small></div>
+ <button class="sip-btn sip-edit" onclick="window.sipAdd()">＋ Tambah ORMAS</button></div>
+ <div style="overflow:auto;margin-top:15px"><table><thead><tr><th>No</th><th>Nama ORMAS</th><th>Ketua</th><th>Periode</th><th>Status</th><th>Jumlah Anggota</th><th>Bidang</th><th>Aksi</th></tr></thead>
+ <tbody>${data.map((x,i)=>`<tr><td>${i+1}</td><td><b>${esc(x.nama)}</b></td><td>${esc(x.ketua)}</td><td>${esc(x.periode)}</td><td>${esc(x.status)}</td><td>${Number(x.jumlahAnggota||0).toLocaleString("id-ID")}</td><td>${esc(x.bidang)}</td><td><button class="sip-btn sip-edit" onclick="window.sipEdit(${x.id})">Edit</button> <button class="sip-btn sip-del" onclick="window.sipDelete(${x.id})">Hapus</button></td></tr>`).join("")}</tbody></table></div>`;
+}
+function openForm(x){
+ document.getElementById("sipEditModal").classList.add("show");document.getElementById("sipId").value=x?.id||"";
+ fields.forEach(([k])=>{const el=document.getElementById("sip_"+k);if(el)el.value=x?.[k]??""});
+}
+window.sipAdd=()=>openForm(null);
+window.sipEdit=id=>openForm(data.find(x=>x.id===id));
+window.sipDelete=id=>{if(confirm("Hapus data ORMAS ini?")){data=data.filter(x=>x.id!==id);save();render();}};
+window.sipClose=()=>document.getElementById("sipEditModal").classList.remove("show");
+window.sipSave=()=>{
+ const id=Number(document.getElementById("sipId").value);
+ const x={id:id||Date.now()};
+ fields.forEach(([k])=>x[k]=document.getElementById("sip_"+k).value.trim());
+ x.jumlahAnggota=Number(x.jumlahAnggota)||0;
+ if(!x.nama)return alert("Nama ORMAS wajib diisi.");
+ if(id)data=data.map(a=>a.id===id?x:a);else data.push(x);
+ save();window.sipClose();render();
+};
+document.addEventListener("DOMContentLoaded",()=>{
+ const modal=document.createElement("div");modal.id="sipEditModal";modal.innerHTML=`<div class="sip-modal"><h2 id="sipFormTitle">Edit Data ORMAS</h2><input type="hidden" id="sipId"><div class="sip-grid">
+ ${fields.map(([k,l])=>`<div class="sip-field ${["sk","alamat","detail"].includes(k)?"sip-full":""}"><label>${l}</label>${["sk","alamat","detail"].includes(k)?`<textarea id="sip_${k}" rows="${k==="detail"?5:3}"></textarea>`:`<input id="sip_${k}" type="${k==="jumlahAnggota"?"number":"text"}" min="0">`}</div>`).join("")}
+ </div><div class="sip-actions"><button class="sip-btn" onclick="window.sipClose()">Batal</button><button class="sip-btn sip-edit" onclick="window.sipSave()">Simpan</button></div></div>`;
+ document.body.appendChild(modal);render();
+});
+})();
+</script>
+<script id="sip-dashboard-edit-js">
+(function(){
+const KEY="sipomas_dashboard_edit_v1";
+const defaults={total:"13",anggota:"7441",cabang:"0",pembinaan:"0"};
+let vals=JSON.parse(localStorage.getItem(KEY)||"null")||defaults;
+function save(){localStorage.setItem(KEY,JSON.stringify(vals))}
+function findCards(){
+ const cards=[...document.querySelectorAll(".card")];
+ return cards.filter(c=>c.querySelector(".value"));
+}
+function render(){
+ const cards=findCards();
+ const map=["total","anggota","cabang","pembinaan"];
+ map.forEach((k,i)=>{if(cards[i]){const v=cards[i].querySelector(".value");if(v)v.textContent=Number(vals[k]||0).toLocaleString("id-ID")}});
+}
+function open(){
+ document.getElementById("sipDashModal").classList.add("show");
+ ["total","anggota","cabang","pembinaan"].forEach(k=>document.getElementById("sd_"+k).value=vals[k]||0);
+}
+window.sipOpenDashboardEdit=open;
+window.sipSaveDashboard=function(){
+ ["total","anggota","cabang","pembinaan"].forEach(k=>vals[k]=Math.max(0,Number(document.getElementById("sd_"+k).value)||0));
+ save();render();document.getElementById("sipDashModal").classList.remove("show");
+};
+window.sipCloseDashboard=function(){document.getElementById("sipDashModal").classList.remove("show")};
+document.addEventListener("DOMContentLoaded",function(){
+ const modal=document.createElement("div");modal.id="sipDashModal";
+ modal.innerHTML=`<div class="sip-dash-form">
+ <h2>✏️ Edit Dashboard</h2>
+ <p>Angka pada dashboard dapat diubah sesuai data terbaru.</p>
+ <div class="sip-dash-grid">
+ <div><label>Total ORMAS</label><input id="sd_total" type="number" min="0"></div>
+ <div><label>Total Anggota</label><input id="sd_anggota" type="number" min="0"></div>
+ <div><label>ORMAS Cabang</label><input id="sd_cabang" type="number" min="0"></div>
+ <div><label>Perlu Pembinaan</label><input id="sd_pembinaan" type="number" min="0"></div>
+ </div>
+ <div class="sip-dash-actions"><button class="sip-dashboard-btn" style="background:#777" onclick="sipCloseDashboard()">Batal</button><button class="sip-dashboard-btn" onclick="sipSaveDashboard()">Simpan</button></div>
+ </div>`;
+ document.body.appendChild(modal);
+ const dash=document.querySelector("#dashboard");
+ if(dash){
+   const box=document.createElement("div");box.id="sipDashEdit";
+   box.innerHTML='<b>Dashboard SIPOMAS</b><button class="sip-dashboard-btn" onclick="sipOpenDashboardEdit()">✏️ Edit Dashboard</button>';
+   dash.insertBefore(box,dash.firstElementChild);
+ }
+ render();
+});
+})();
+</script>
+<script id="sip-doc-edit-js">
+(function(){
+const KEY="sipomas_dokumentasi_v1";
+const seed=[
+ {id:1,judul:"Sosialisasi SIPOMAS",keterangan:"Kegiatan sosialisasi dan pengenalan SIPOMAS.",gambar:""},
+ {id:2,judul:"Koordinasi Tim",keterangan:"Koordinasi pelaksanaan aksi perubahan.",gambar:""},
+ {id:3,judul:"Pendataan ORMAS",keterangan:"Kegiatan pendataan dan pemutakhiran data ORMAS.",gambar:""}
+];
+let docs=JSON.parse(localStorage.getItem(KEY)||"null")||seed;
+function save(){localStorage.setItem(KEY,JSON.stringify(docs))}
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function render(){
+ let box=document.getElementById("sipDocEditor");
+ if(!box)return;
+ box.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+ <div><h3 style="margin:0;color:#0b5d4f">✏️ Edit Dokumentasi</h3><small>Tambah, ubah, atau hapus dokumentasi kegiatan.</small></div>
+ <button class="sip-doc-btn" onclick="sipAddDoc()">＋ Tambah Dokumentasi</button></div>
+ <div class="sip-doc-grid">${docs.map(x=>`
+ <div class="sip-doc-card">
+ ${x.gambar?`<img src="${esc(x.gambar)}">`:`<div style="height:150px;border-radius:7px;background:#e8eeec;display:grid;place-items:center;font-size:42px">📷</div>`}
+ <label>Judul kegiatan</label><input id="dt-${x.id}" value="${esc(x.judul)}">
+ <label>Keterangan</label><textarea id="dk-${x.id}" rows="3">${esc(x.keterangan)}</textarea>
+ <label>Foto</label><input type="file" accept="image/*" onchange="sipImage(${x.id},this)">
+ <div class="sip-doc-actions"><button class="sip-doc-btn sip-doc-save" onclick="sipSaveDoc(${x.id})">Simpan</button><button class="sip-doc-btn sip-doc-del" onclick="sipDeleteDoc(${x.id})">Hapus</button></div>
+ </div>`).join("")}</div>`;
+}
+window.sipImage=function(id,input){
+ const f=input.files[0];if(!f)return;
+ const reader=new FileReader();reader.onload=()=>{const x=docs.find(a=>a.id===id);if(x){x.gambar=reader.result;save();render()}};reader.readAsDataURL(f);
+}
+window.sipSaveDoc=function(id){
+ const x=docs.find(a=>a.id===id);if(!x)return;
+ x.judul=document.getElementById("dt-"+id).value;
+ x.keterangan=document.getElementById("dk-"+id).value;
+ save();render();alert("Dokumentasi berhasil disimpan.");
+}
+window.sipDeleteDoc=function(id){if(confirm("Hapus dokumentasi ini?")){docs=docs.filter(x=>x.id!==id);save();render()}}
+window.sipAddDoc=function(){docs.push({id:Date.now(),judul:"Dokumentasi Baru",keterangan:"",gambar:""});save();render()}
+document.addEventListener("DOMContentLoaded",function(){
+ const sec=document.getElementById("dokumentasi");
+ if(sec){
+  const box=document.createElement("div");box.id="sipDocEditor";sec.appendChild(box);
+  render();
+ }
+});
+})();
+</script></body>
+</html>
